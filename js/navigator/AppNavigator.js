@@ -1,6 +1,7 @@
 import {createSwitchNavigator,createStackNavigator,createAppContainer} from 'react-navigation'
 import WelcomePage from "../page/WelcomePage";
 import HomePage from "../page/HomePage";
+import DetailPage from "../page/DetailPage";
 
 const AppWelcomeNav = createStackNavigator({
     Welcome:{
@@ -14,7 +15,13 @@ const AppWelcomeNav = createStackNavigator({
 const AppHomeNav = createStackNavigator({
     Home:{
         screen: HomePage,
+        navigationOptions:{
+            header:null,
+        },
     },
+    Detail:{
+        screen:DetailPage,
+    }
 })
 
 const AppNav = createSwitchNavigator({

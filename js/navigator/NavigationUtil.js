@@ -19,4 +19,20 @@ export default class NavigationUtil {
     static BackUp(navigation){
         navigation.goBack();
     }
+
+    /**
+     * 跳转到详情页面并传递参数
+     * @param page
+     * @constructor
+     */
+    static GoPage(props,page){
+        const navigation = NavigationUtil.navigation;
+        if (!navigation){
+            console.log('navigation can not be null!');
+            return;
+        }
+        navigation.navigate(page,{
+            ...props
+        });
+    }
 }
