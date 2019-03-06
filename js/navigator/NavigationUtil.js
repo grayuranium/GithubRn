@@ -21,7 +21,7 @@ export default class NavigationUtil {
     }
 
     /**
-     * 跳转到详情页面并传递参数
+     * 跳转到详情页面并传递参数,这里必须使用homepage的navigation
      * @param page
      * @constructor
      */
